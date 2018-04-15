@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Sub total:</strong>
+  <%= number_to_currency(@order.sub_total) %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= number_to_currency(@order.total_amount) %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= number_to_currency(@order.tax) %>
+</p>
+
+<p>
+  <strong>Order date:</strong>
+  <%= @order.order_date %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
