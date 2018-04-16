@@ -15,7 +15,7 @@ class Order < ApplicationRecord
     update_columns(sub_total: sub_total, tax: tax)
   end
 
-  def amount_due
+  def total_amount
     sub_total + tax
   end
 end

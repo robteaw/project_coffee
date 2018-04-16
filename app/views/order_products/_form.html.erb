@@ -13,18 +13,18 @@
 
   <div class="field">
     <%= form.label :order_id %>
-    <%= form.text_field :order_id, id: :order_product_order_id %>
+    <%= form.collection_select :order_id, Order.all, :id, :name %>
   </div>
 
   <div class="field">
     <%= form.label :product_id %>
-    <%= form.text_field :product_id, id: :order_product_product_id %>
+    <%= form.collection_select :product_id, Product.all, :id, :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :employee_id %>
-    <%= form.text_field :employee_id, id: :order_product_employee_id %>
-  </div>
+    <div class="field">
+      <%= form.label :employee_id %>
+      <%= form.collection_select :employee_id, Employee.all, :id, :name %>
+    </div>
 
   <div class="field">
     <%= form.label :quantity %>

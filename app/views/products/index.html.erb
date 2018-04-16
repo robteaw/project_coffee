@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Image url</th>
+      <th>Image</th>
       <th>Price</th>
       <th>Remaining quantity</th>
       <th colspan="3"></th>
@@ -17,12 +17,13 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.image_url %></td>
+        <td class="image">
+          <%= image_tag(product.image_url, class: 'list_image', :height => 50) %></td>
         <td><%= number_to_currency(product.price) %></td>
         <td><%= product.remaining_quantity %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -48,8 +49,8 @@
     padding: 8px;
   }
   /*table row*/
-  #orders tr:nth-child(even){background-color: #FFFACD;}
-  #orders tr:nth-child(odd){background-color: #F5DEB3;}
+  #orders tr:nth-child(even){background-color: #dddfd4;}
+  #orders tr:nth-child(odd){background-color: #fae596;}
 
   /*hover*/
   #orders tr:hover {background-color: #FFFAFA;}

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectPractice</title>
+    <title>Coffee_Project</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <div class="one">
-      <h1><center>Coffee Ordering System</center></h1>
+      <img src="https://png.pngtree.com/element_origin_min_pic/16/09/23/1257e4b57685460.jpg" align="left" width="100px" height="100" border="2px">
+      <center><h1>Coffee Ordering System</h1></center>
+      <!--<%= image_tag 'coffee_cup.jpg', alt: '4 R.I.L.S' %>-->
+    </div>
+    <div class="two">
       <ul><center>
-        <button><b><%= link_to "New Order", new_order_path%></b></button>
-        <button><b><%= link_to "Review Orders", orders_path%></b></button>
-        <button><b><%= link_to "Products", products_path%></b></button>
-        <button><b><%= link_to "Order Products", order_products_path%></b></button>
-        <button><b><%= link_to "Employees", employees_path%></b></button>
-        <button><b><%= link_to "Sales", sales_path%></b></button>
+        <li><b><%= link_to "New Order", new_order_path%></b></li>
+        <li><b><%= link_to "Review Orders", orders_path%></b></li>
+        <li><b><%= link_to "Products", products_path%></b></li>
+        <li><b><%= link_to "Order Products", order_products_path%></b></li>
+        <li><b><%= link_to "Employees", employees_path%></b></li>
+        <li><b><%= link_to "Sales", sales_path%></b></li>
 
       </center>
       </ul></div>
@@ -23,19 +27,52 @@
       .one {
         background-color: #FFD700;
         border-style: solid;
-        border-width: 5px;
+        border-width: 3px;
+      }
+      .two {
+        background-color: #173e43;
+        border-style: solid;
+        border-width: 3px;
       }
 
-      body {background-color: #87CEFA;}
-      button {
-        background-color: #FFFACD;
-        border: 2px solid #555555;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        display: inline-block;
-        font-size: 14px;
+      body {background-color: #87CEFA;
       }
+
+      /*---Link---*/
+
+      ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F0F8FF;
+      }
+
+      li {
+        display: inline-block;
+        float: left;
+        list-style-type: square;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        font-weight: bold;
+        color: white;
+        background-color: #0000FF;
+      }
+
+      a:hover {
+        font-weight: bold;
+        background-color: #0000FF;
+      }
+
 
       a:link {
         text-decoration:none;
