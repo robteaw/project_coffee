@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180415041940) do
+ActiveRecord::Schema.define(version: 20180416180057) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
@@ -20,9 +23,9 @@ ActiveRecord::Schema.define(version: 20180415041940) do
   end
 
   create_table "order_products", force: :cascade do |t|
-    t.integer "order_id"
-    t.integer "product_id"
-    t.integer "employee_id"
+    t.bigint "order_id"
+    t.bigint "product_id"
+    t.bigint "employee_id"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -52,12 +55,24 @@ ActiveRecord::Schema.define(version: 20180415041940) do
 
   create_table "sales", force: :cascade do |t|
     t.decimal "total_sales"
-    t.integer "order_id"
-    t.integer "employee_id"
+    t.bigint "order_id"
+    t.bigint "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["employee_id"], name: "index_sales_on_employee_id"
     t.index ["order_id"], name: "index_sales_on_order_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "order_products", "employees"
+  add_foreign_key "order_products", "orders"
+  add_foreign_key "order_products", "products"
+  add_foreign_key "sales", "employees"
+  add_foreign_key "sales", "orders"
 end
