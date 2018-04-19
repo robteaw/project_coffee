@@ -18,3 +18,7 @@ Product.create([{name:'Frappuccino',image_url:'http://mocafeusa.com/wp-content/u
 
 Employee.create([{name:'Robert',pay_scale:'15.00'}])
 Employee.create([{name:'John',pay_scale:'20.00'}])
+
+
+#add an admin
+User.new({ :email => 'admin@rils.com', :password => 'password', :password_confirmation => 'password', :admin => true}).save
