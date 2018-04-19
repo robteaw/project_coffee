@@ -7,13 +7,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <script type="text/javascript">
+      function changecolor(color){
+          document.getElementsByTagName('body')[0].style.
+              backgroundColor=color.value;
+      }
+    </script>
+
     <div class="one">
       <img src="https://png.pngtree.com/element_origin_min_pic/16/09/23/1257e4b57685460.jpg" align="left" width="100px" height="100" border="2px">
       <center><h1>Coffee Ordering System</h1></center>
       <!--<%= image_tag 'coffee_cup.jpg', alt: '4 R.I.L.S' %>-->
+
     </div>
     <div class="two">
       <ul><center>
+
         <li><b><%= link_to "New Order", new_order_path%></b></li>
         <li><b><%= link_to "Review Orders", orders_path%></b></li>
         <li><b><%= link_to "Products", products_path%></b></li>
@@ -84,5 +93,17 @@
 
   <body>
     <%= yield %>
+
+<br><br><br><br>
+    <div>
+      <select size="1" onchange="changecolor(this);" align="right">
+        <option value="select">Select a Color</option>
+        <option value="red">Red</option>
+        <option value="#87CEFA">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="#00FF7F">Green</option>
+        <option value="#9370DB">Purple</option>
+      </select>
+    </div>
   </body>
 </html>
