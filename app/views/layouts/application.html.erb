@@ -24,21 +24,16 @@
       <ul><center>
         <li><b><%= link_to "New Order", new_order_path%></b></li>
         <li><b><%= link_to "Review Orders", orders_path%></b></li>
-        <li><b><%= link_to "Products", products_path%></b></li>
-        <li><b><%= link_to "Order Products", order_products_path%></b></li>
-        <li><b><%= link_to "Employees", employees_path%></b></li>
-        <li><b><%= link_to "Sales", sales_path%></b></li>
-        <li><b><%= link_to "User", users_path%></b></li>
-
+        <li><b><%= link_to "Menu", products_path%></b></li>
       </center>
       </ul></div>
     <% if session[:user_id] %>
       <nav class="logged_in_nav">
         <ul>
-          <li><b><%= link_to "New Order", new_order_path%></b></li>
-          <li><b><%= link_to 'Review Orders',   orders_path %></b></li>
-          <li><b><%= link_to 'Menu', products_path %></b></li>
-          <li><b><%= link_to 'Users',    users_path %></b></li>
+          <li><b><%= link_to "Order Products", order_products_path%></b></li>
+          <li><b><%= link_to "Employees", employees_path%></b></li>
+          <li><b><%= link_to "Sales", sales_path%></b></li>
+          <li><b><%= link_to 'Users', users_path %></b></li>
           <li class="home"><b><%= link_to "Home", admin_path %></b></li>
           <li class="logout"><b><%= link_to 'Logout', logout_path, method: :delete %></b></li>
         </ul>
