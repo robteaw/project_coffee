@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  # Change the path below to change local:3000 root path
+  root to: redirect('/products')
   get 'admin' => 'admin#index'
 
   controller :sessions do
@@ -13,5 +16,6 @@ Rails.application.routes.draw do
   resources :products
   resources :employees
   resources :orders
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
