@@ -5,6 +5,7 @@
 <table id="orders">
   <thead>
     <tr>
+      <th>Sale Date</th>
       <th>Total sales</th>
       <th>Customer</th>
       <th>Employee</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @sales.each do |sale| %>
       <tr>
+        <td><%= sale.sale_date %></td>
         <td><%= number_to_currency sale.total_sales %></td>
         <td><%= sale.order.name %></td>
         <td><%= sale.employee.name %></td>

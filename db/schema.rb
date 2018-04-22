@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416180057) do
+ActiveRecord::Schema.define(version: 20180422030004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20180416180057) do
     t.decimal "sub_total"
     t.decimal "total_amount"
     t.decimal "tax"
-    t.datetime "order_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -59,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180416180057) do
     t.bigint "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "sale_date"
     t.index ["employee_id"], name: "index_sales_on_employee_id"
     t.index ["order_id"], name: "index_sales_on_order_id"
   end

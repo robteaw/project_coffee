@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+    <div class="field">
+      <%= form.label :sale_date %>
+      <%= form.date_select :sale_date, id: :sale_date_of_sale %>
+    </div>
+
   <div class="field">
     <%= form.label :total_sales %>
     <%= form.text_field :total_sales, id: :sale_total_sales %>

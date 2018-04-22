@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Sale Date:</strong>
+  <%= @sale.sale_date %>
+</p>
+
+<p>
   <strong>Total sales:</strong>
   <%= number_to_currency (@sale.total_sales) %>
 </p>
