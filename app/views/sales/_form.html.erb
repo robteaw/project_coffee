@@ -23,15 +23,17 @@
 
   <div class="field">
     <%= form.label :order_id %>
-    <%= form.text_field :order_id, id: :sale_order_id %>
+    <%= form.collection_select :sale_order_id, Order.all, :id, :name %>
   </div>
 
   <div class="field">
     <%= form.label :employee_id %>
-    <%= form.text_field :employee_id, id: :sale_employee_id %>
+    <%= form.collection_select :sale_employee_id, Employee.all, :id, :name %>
   </div>
+<br>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+

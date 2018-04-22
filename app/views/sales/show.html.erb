@@ -12,12 +12,12 @@
 
 <p>
   <strong>Order:</strong>
-  <%= @sale.order %>
+  <%= @sale.order.name %>
 </p>
 
 <p>
   <strong>Employee:</strong>
-  <%= @sale.employee %>
+  <%= @sale.employee.name %>
 </p>
 
 <%= link_to 'Edit', edit_sale_path(@sale) %> |
