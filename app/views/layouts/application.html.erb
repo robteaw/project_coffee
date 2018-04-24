@@ -43,6 +43,33 @@
     <% end %>
     </nav>
 
+    <div class="w3-content w3-display-container">
+      <img class="mySlides" src="https://cdn.pixabay.com/photo/2016/03/26/13/09/organic-1280537_1280.jpg" height="500" width="100%" >
+      <img class="mySlides" src="https://cdn.pixabay.com/photo/2017/04/25/08/02/coffee-beans-2258839_1280.jpg" height="500" width="100%">
+      <img class="mySlides" src="https://cdn.pixabay.com/photo/2013/08/11/19/46/coffee-171653_1280.jpg" height="500" width="100%">
+      <img class="mySlides" src="https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_1280.jpg" height="500" width="100%">
+
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 5 seconds
+        }
+    </script>
+
+
+
     <style>
       .one {
         background-color: #FFD700;
