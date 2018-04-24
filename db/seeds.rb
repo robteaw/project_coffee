@@ -28,3 +28,4 @@ Employee.create([{name:'John',pay_scale:'20.00'}])
 
 # admin
 User.create([{email: 'admin@rils.com', password: 'password', password_confirmation: 'password'}])
+
