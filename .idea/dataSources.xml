@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="rils_project_production@localhost" uuid="f74c74bb-a33f-423e-82fd-865fe9bc487c">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_production</jdbc-url>
-      <driver-properties>
-        <property name="ApplicationName" value="DataGrip" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="rils_project_test @localhost" uuid="f7827b6d-b7e5-4d30-948c-b8e6897d11b6">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_test</jdbc-url>
-      <driver-properties>
-        <property name="ApplicationName" value="DataGrip" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="rils_project_development@localhost" uuid="83d3c52d-07b0-4ab4-82d3-4a8909adf8c8">
+    <data-source source="LOCAL" name="rils_project_development@localhost" uuid="1158cb21-52da-4e98-ab97-1084e79ed75f">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_development</jdbc-url>
-      <driver-properties>
-        <property name="ApplicationName" value="DataGrip" />
-      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="rils_project_test@localhost" uuid="56b958eb-8ae8-40d8-b027-c757e7b57e5e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="rils_project_production@localhost" uuid="e4a24dc5-0be7-44f1-b957-12f76adcdd9b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_production</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -15,7 +15,8 @@
     </script>
 
     <div class="one">
-      <img src="https://png.pngtree.com/element_origin_min_pic/16/09/23/1257e4b57685460.jpg" align="left" width="100px" height="100" border="2px">
+      <img src="https://png.pngtree.com/element_origin_min_pic/16/09/23/1257e4b57685460.jpg"
+           align="left" width="100px" height="100" border="2px">
       <center><h1>Coffee Ordering System</h1></center>
       <!--<%= image_tag 'coffee_cup.jpg', alt: '4 R.I.L.S' %>-->
 
@@ -72,18 +73,23 @@
 
     <style>
       .one {
-        background-color: #FFD700;
+        background-color: #712A17;
         border-style: solid;
         border-width: 3px;
+        border-color: #6A5750;
+        color: white;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       }
       .two {
-        background-color: #173e43;
+        background-color: #A45330;
+        border-color: #6A5750;
         border-style: solid;
         border-width: 3px;
       }
 
       .login {
-        background-color: #C0C0C0;
+        background-color: #856046;
+        border-color: #6A5750;
         text-color: white;
       }
 
@@ -91,19 +97,26 @@
         background-color: #173e43;
         border-style: solid;
         border-width: 3px;
+        border-color:#6A5750;
       }
 
       .logout {
         background-color: #C0C0C0;
-        text-color: white;
+        color: white;
       }
 
       .home {
         background-color: #FFDEAD;
-        text-color: white;
       }
 
-      body {background-color: #87CEFA;
+      body {
+        background-color: #856046;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: white;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       }
 
       /*---Link---*/
@@ -113,7 +126,8 @@
         margin: 0px;
         padding: 0;
         overflow: hidden;
-        background-color: #F0F8FF;
+        background-color: #C7A693;
+
       }
 
       li {
@@ -122,9 +136,9 @@
         list-style-type: square;
       }
 
+
       li a {
         display: block;
-        color: white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -154,15 +168,7 @@
     <%= yield %>
 
 <br><br><br><br>
-    <div>
-      <select size="1" onchange="changecolor(this);" align="right">
-        <option value="select">Select a Color</option>
-        <option value="red">Red</option>
-        <option value="#87CEFA">Blue</option>
-        <option value="yellow">Yellow</option>
-        <option value="#00FF7F">Green</option>
-        <option value="#9370DB">Purple</option>
-      </select>
+
     </div>
   </body>
 </html>
