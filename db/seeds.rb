@@ -17,6 +17,7 @@ Product.create([{name:'Latte',image_url:'https://mixcafe.co/wp-content/uploads/2
 Product.create([{name:'Frappuccino',image_url:'http://mocafeusa.com/wp-content/uploads/2017/12/Carmel-frappe-1.png',
                  price:'4.50', remaining_quantity:'50'}])
 
+
 # employee
 Employee.create([{name:'Robert',pay_scale:'15.00'}])
 Employee.create([{name:'Mary',pay_scale:'15.00'}])
