@@ -15,9 +15,8 @@
     </script>
 
     <div class="one">
-      <img src="https://png.pngtree.com/element_origin_min_pic/16/09/23/1257e4b57685460.jpg" align="left" width="100px" height="100" border="2px">
+
       <center><h1>Coffee Ordering System</h1></center>
-      <!--<%= image_tag 'coffee_cup.jpg', alt: '4 R.I.L.S' %>-->
 
     </div>
     <div class="two">
@@ -43,40 +42,85 @@
     <% end %>
     </nav>
 
+    <div class="gallery_slideshow">
+      <img class="mySlides" src="http://s1.picswalls.com/wallpapers/2014/07/24/beautiful-coffee-wallpaper_112615430_81.jpg" height="500" width="100%">
+      <img class="mySlides" src="https://wallpaperscraft.com/image/saucer_cup_coffee_naptok_smoke_table_grain_84254_3840x2160.jpg" height="500" width="100%">
+      <img class="mySlides" src="https://images6.alphacoders.com/402/402709.jpg" height="500" width="100%">
+      <img class="mySlides" src="https://99px.ru/sstorage/53/2014/01/tmb_93961_1983.jpg" height="500" width="100%">
+
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 7000); // Change image every 7 seconds
+        }
+    </script>
+
+
+
     <style>
       .one {
-        background-color: #FFD700;
+        background-color: #712A17;
+        opacity: 0.6;
         border-style: solid;
         border-width: 3px;
+        border-color: #6A5750;
+        color: white;
+        font-family: inherit;
       }
       .two {
-        background-color: #173e43;
+        background-color: #A45330;
+        border-color: #6A5750;
         border-style: solid;
         border-width: 3px;
       }
 
       .login {
-        background-color: #C0C0C0;
-        text-color: white;
+        background-color: #856046;
+        border-color: #6A5750;
+        color: white;
       }
 
       .logged_in_nav {
         background-color: #173e43;
         border-style: solid;
         border-width: 3px;
+        border-color:#6A5750;
       }
 
       .logout {
-        background-color: #C0C0C0;
-        text-color: white;
+        background-color: #dbc3d0;
       }
+
 
       .home {
-        background-color: #FFDEAD;
-        text-color: white;
+        background-color: #856046;
       }
 
-      body {background-color: #87CEFA;
+      .gallery_slideshow {
+        opacity: 0.9;
+      }
+
+      body {
+        background-color: #856046;
+        font-family: inherit;
+        color:black;
+      }
+
+      h1 {
+        color: white;
+        font-family: inherit;
       }
 
       /*---Link---*/
@@ -86,8 +130,18 @@
         margin: 0px;
         padding: 0;
         overflow: hidden;
-        background-color: #F0F8FF;
+        background-color: #C7A693;
+
       }
+
+      .two li a {
+        color:white;
+      }
+
+      .logged_in_nav li a {
+        color: white;
+      }
+
 
       li {
         display: inline-block;
@@ -95,29 +149,35 @@
         list-style-type: square;
       }
 
+
       li a {
         display: block;
-        color: white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        color: black;
       }
+
 
       li a:hover {
         font-weight: bold;
-        color: white;
-        background-color: #0000FF;
+        color: black;
+        background-color: #e0e0eb;
+        opacity: 0.2;
       }
 
       a:hover {
         font-weight: bold;
-        background-color: #0000FF;
+        background-color: #e0e0eb;
+        color:black;
       }
 
 
       a:link {
         text-decoration:none;
+        color:black;
       }
+
 
 
     </style>
@@ -127,15 +187,7 @@
     <%= yield %>
 
 <br><br><br><br>
-    <div>
-      <select size="1" onchange="changecolor(this);" align="right">
-        <option value="select">Select a Color</option>
-        <option value="red">Red</option>
-        <option value="#87CEFA">Blue</option>
-        <option value="yellow">Yellow</option>
-        <option value="#00FF7F">Green</option>
-        <option value="#9370DB">Purple</option>
-      </select>
+
     </div>
   </body>
 </html>

@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+ActiveRecord::Base.establish_connection
+ActiveRecord::Base.connection.tables.each do |table|
+  ActiveRecord::Base.connection.execute("TRUNCATE #{table} RESTART IDENTITY CASCADE") unless table == 'schema_migrations' || table == 'ar_internal_metadata'
+end
 
 # product
 Product.create([{name:'Coffee',image_url:'https://png.kisspng.com/20171216/dd9/5a35ea02ae33d1.6543248215134827547135.png',
@@ -17,6 +21,9 @@ Product.create([{name:'Latte',image_url:'https://mixcafe.co/wp-content/uploads/2
 Product.create([{name:'Frappuccino',image_url:'http://mocafeusa.com/wp-content/uploads/2017/12/Carmel-frappe-1.png',
                  price:'4.50', remaining_quantity:'50'}])
 
+
+
+
 # employee
 Employee.create([{name:'Robert',pay_scale:'15.00'}])
 Employee.create([{name:'Mary',pay_scale:'15.00'}])
@@ -27,3 +34,4 @@ Employee.create([{name:'John',pay_scale:'20.00'}])
 
 # admin
 User.create([{email: 'admin@rils.com', password: 'password', password_confirmation: 'password'}])
+
