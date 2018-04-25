@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # Change the path below to change local:3000 root path
-  root to: redirect('/login')
+  root to: redirect('/products')
   get 'admin' => 'admin#index'
 
   controller :sessions do

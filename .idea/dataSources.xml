@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="rils_project_development@localhost" uuid="1158cb21-52da-4e98-ab97-1084e79ed75f">
+    <data-source source="LOCAL" name="Rails Project_Practice: test" uuid="3c72f12e-9fe3-4b1a-b769-40e9662449ea">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_development</jdbc-url>
+      <jdbc-url>jdbc:postgresql:rils_project_test</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="rils_project_test@localhost" uuid="56b958eb-8ae8-40d8-b027-c757e7b57e5e">
+    <data-source source="LOCAL" name="Rails Project_Practice: production" uuid="ec679331-f5ff-46fd-8b96-0c753ac6bf26">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_test</jdbc-url>
+      <jdbc-url>jdbc:postgresql:rils_project_production</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="rils_project_production@localhost" uuid="e4a24dc5-0be7-44f1-b957-12f76adcdd9b">
+    <data-source source="LOCAL" name="Rails Project_Practice: development" uuid="2eb5e897-b216-47f2-a751-68c2bb2f6cf4">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/rils_project_production</jdbc-url>
+      <jdbc-url>jdbc:postgresql:rils_project_development</jdbc-url>
     </data-source>
   </component>
 </project>
