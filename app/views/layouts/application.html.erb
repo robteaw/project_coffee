@@ -7,40 +7,55 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <script type="text/javascript">
-      function changecolor(color){
-          document.getElementsByTagName('body')[0].style.
-              backgroundColor=color.value;
-      }
-  </script>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Coffee_Project</title>
+    <%= csrf_meta_tags %>
 
-  <div class="one">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <center><h1>Coffee Ordering System</h1></center>
+    <script type="text/javascript">
+        function changecolor(color){
+            document.getElementsByTagName('body')[0].style.
+                backgroundColor=color.value;
+        }
+    </script>
 
-  </div>
-  <div class="two">
-    <ul><center>
-      <li><b><%= link_to "New Order", new_order_path%></b></li>
-      <li><b><%= link_to "Review Orders", orders_path%></b></li>
-      <li><b><%= link_to "Menu", products_path%></b></li>
-      <li><b><%= link_to "Order Products", order_products_path%></b></li>
-      <li class="login"><b><%= link_to 'Login', login_path, method: :create %></b></li>
-    </center>
-    </ul></div>
+    <div class="one">
+      <!--<img src="https://png.pngtree.com/element_origin_min_pic/16/09/23/1257e4b57685460.jpg" align="left" width="100px" height="100" border="2px">-->
+      <center><h1>Coffee Ordering System</h1></center>
+      <!--<%= image_tag 'coffee_cup.jpg', alt: '4 R.I.L.S' %>-->
 
-  <% if session[:user_id] %>
-      <nav class="logged_in_nav">
-        <ul>
-          <li><b><%= link_to "Employees", employees_path%></b></li>
-          <li><b><%= link_to "Sales", sales_path%></b></li>
-          <li><b><%= link_to 'Users', users_path %></b></li>
-          <li class="home"><b><%= link_to "Home", admin_path %></b></li>
-          <li class="logout"><b><%= link_to 'Logout', logout_path, method: :delete %></b></li>
-        </ul>
-      </nav>
-  <% end %>
-  </nav>
+    </div>
+    <div class="two">
+      <ul><center>
+        <li><b><%= link_to "New Order", new_order_path%></b></li>
+        <li><b><%= link_to "Review Orders", orders_path%></b></li>
+        <li><b><%= link_to "Menu", products_path%></b></li>
+        <li><b><%= link_to "Order Products", order_products_path%></b></li>
+        <li class="home"><b><%= link_to "Home", admin_path %></b></li>
+        <% if user_signed_in? %>
+            <li class="logout"><b><%= link_to 'Logout', destroy_user_session_path, method: :delete %></b></li>
+        <% else %>
+            <li class="login"><b><%= link_to 'Login', new_user_session_path %></b></li>
+        <% end %>
+      </center>
+      </ul></div>
+
+    <nav class="logged_in_nav">
+      <ul>
+        <% if current_user.try(&:manager) %>
+            <li><b><%= link_to "Employees", employees_path%></b></li>
+            <li><b><%= link_to "Sales", sales_path%></b></li>
+            <li><b><%= link_to 'Users', users_path %></b></li>
+        <% end %>
+
+      </ul>
+    </nav>
+    </nav>
+
 
   <div class="gallery_slideshow">
     <img class="mySlides" src="http://s1.picswalls.com/wallpapers/2014/07/24/beautiful-coffee-wallpaper_112615430_81.jpg" height="500" width="100%">

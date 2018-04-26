@@ -30,11 +30,13 @@ Product.create([{name:'Brownie',image_url:'http://www.newbalance-factory-outlet.
 
 # employee
 Employee.create([{name:'Robert',pay_scale:'15.00'}])
-Employee.create([{name:'Mary',pay_scale:'15.00'}])
-Employee.create([{name:'Julie',pay_scale:'15.00'}])
-Employee.create([{name:'Ben',pay_scale:'15.00'}])
-Employee.create([{name:'John',pay_scale:'20.00'}])
-
+Employee.create([{name:'Ithar',pay_scale:'15.00'}])
+Employee.create([{name:'Lorrie',pay_scale:'15.00'}])
+Employee.create([{name:'Shawn',pay_scale:'15.00'}])
 
 # admin
-User.create([{email: 'admin@rils.com', password: 'password', password_confirmation: 'password'}])
+User.create([{email: 'admin@rils.com', password: 'password', password_confirmation: 'password', manager: true}])
+User.create([{email: 'robert@rils.com', password: 'password', password_confirmation: 'password'}])
+User.create([{email: 'ithar@rils.com', password: 'password', password_confirmation: 'password'}])
+User.create([{email: 'lorrie@rils.com', password: 'password', password_confirmation: 'password'}])
+User.create([{email: 'shawn@rils.com', password: 'password', password_confirmation: 'password'}])

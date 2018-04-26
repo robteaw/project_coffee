@@ -1,5 +1,5 @@
 class OrderProductsController < ApplicationController
-  skip_before_action :authorize
+  # skip_before_action :authorize
   before_action :set_order_product, only: [:show, :edit, :update, :destroy]
 
   # GET /order_products
@@ -63,13 +63,13 @@ class OrderProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order_product
-      @order_product = OrderProduct.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_order_product
+    @order_product = OrderProduct.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_product_params
-      params.require(:order_product).permit(:order_id, :product_id, :employee_id, :quantity)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def order_product_params
+    params.require(:order_product).permit(:order_id, :product_id, :employee_id, :quantity)
+  end
 end
