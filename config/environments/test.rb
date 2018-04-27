@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # from: https://www.relishapp.com/rspec/rspec-rails/docs/upgrade
+  config.active_record.maintain_test_schema = false
 end
