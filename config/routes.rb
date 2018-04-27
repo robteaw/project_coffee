@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'sales_report', to: "sales_report#index"
+  post 'sales_report', to: "sales_report#index"
+
   devise_for :users, :path_prefix => 'd', :skip => [:registrations]
   devise_scope :user do
     authenticated do
