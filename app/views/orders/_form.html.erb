@@ -1,36 +1,55 @@
 <%= form_with(model: order, local: true) do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+    <% if order.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
-      <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% order.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :order_name %>
-  </div>
 
     <div class="field">
-      <p>Choose the items for your order:</p>
-      <%= form.fields_for :products do |item|%>
-          <p>
-            <%= item.collection_select :product_id, Product.all,:id,:name %>
-          </p>
-      <% end %>
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :order_name %>
     </div>
-    <br>
 
+    <p>Choose the items for your order:</p>
+    <%= form.fields_for :order_products do |form|%>
+            <%= form.collection_select :product_id, Product.all,:id,:name %>
+          </div>
+    <% end %>
+    <% form_for @order do |f| %>
+        Items:
+        <ul>
+          <%= f.fields_for :product do |items_form|%>
+              <li>
+                <%= items_form.label :name %>
+                <%= items_form.text_field :name %>
+                <%= items_form.label :price %>
+                <%= items_form.text_field :price %>
+              </li>
+          <%end %>
+        </ul>
+    <%end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<br><br>
+
+    <!--<div class="field">-->
+      <!--<p>Choose the items for your order:</p>-->
+      <!--<%= form.fields_for :products do |item|%>-->
+          <!--<p>-->
+            <!--<%= item.collection_select :product_id, Product.all,:id,:name %>-->
+          <!--</p>-->
+      <!--<% end %>-->
+    <!--</div>-->
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
 
 
 <style>
@@ -38,3 +57,6 @@
     color: white;
   }
 </style>
+
+
+<% end %>
