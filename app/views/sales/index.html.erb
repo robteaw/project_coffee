@@ -17,7 +17,7 @@
     <% @sales.each do |sale| %>
       <tr>
         <td><%= sale.sale_date %></td>
-        <td><%= number_to_currency sale.total_sales %></td>
+        <td><%= number_to_currency sale.order.total_amount_was %></td>
         <td><%= sale.order.name %></td>
         <td><%= sale.employee.name %></td>
         <td><%= link_to 'Show', sale %></td>
