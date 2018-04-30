@@ -17,20 +17,20 @@
       <%= form.text_field :name, id: :order_name %>
     </div>
 
-    <p>Choose the items for your order:</p>
-    <%= form.fields_for :order_products do |form|%>
+    <p>Choose the product for your order:</p>
+    <%= form.fields_for :order_items do |form|%>
             <%= form.collection_select :product_id, Product.all,:id,:name %>
           </div>
     <% end %>
     <% form_for @order do |f| %>
         Items:
         <ul>
-          <%= f.fields_for :product do |items_form|%>
+          <%= f.fields_for :product do |products_form|%>
               <li>
-                <%= items_form.label :name %>
-                <%= items_form.text_field :name %>
-                <%= items_form.label :price %>
-                <%= items_form.text_field :price %>
+                <%= products_form.label :name %>
+                <%=products_form.text_field :name %>
+                <%= products_form.label :price %>
+                <%= products_form.text_field :price %>
               </li>
           <%end %>
         </ul>
