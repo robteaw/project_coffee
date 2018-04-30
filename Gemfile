@@ -55,4 +55,3 @@ gem 'jquery-rails'
 
 gem 'devise'
 
-gem ruby '2.3.7'
