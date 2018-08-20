@@ -17,25 +17,35 @@
       <%= form.text_field :name, id: :order_name %>
     </div>
 
-    <p>Choose the product for your order:</p>
-    <%= form.fields_for :order_items do |form|%>
-            <%= form.collection_select :product_id, Product.all,:id,:name %>
-          </div>
+  <div class="field">
+    <p>Choose the items for your order:</p>
+    <%= form.fields_for :order_items do |item|%>
+      <p>
+        <%= item.collection_select :product_id, Product.all,:id,:name %>
+      </p>
     <% end %>
-    <% form_for @order do |f| %>
-        Items:
-        <ul>
-          <%= f.fields_for :product do |products_form|%>
-              <li>
-                <%= products_form.label :name %>
-                <%=products_form.text_field :name %>
-                <%= products_form.label :price %>
-                <%= products_form.text_field :price %>
-              </li>
-          <%end %>
-        </ul>
-    <%end %>
+  </div>
 
+<!--  <p>Choose the items for your order:</p>-->
+  <%#= form.fields_for :order_items do |form|%>
+<!--    <div>-->
+      <%#= form.collection_select :product_id, Product.all,:id,:name %>
+<!--    </div>-->
+  <%# end %>
+  <%# form_for @order do |f| %>
+<!--    Items:-->
+<!--    <ul>-->
+      <%#= f.fields_for :menu do |items_form|%>
+<!--        <li>-->
+          <%#= items_form.label :name %>
+          <%#= items_form.text_field :name %>
+          <%#= items_form.label :price %>
+          <%#= items_form.text_field :price %>
+
+<!--        </li>-->
+      <%#end %>
+<!--    </ul>-->
+  <%#end %>
 <br><br>
 
     <!--<div class="field">-->

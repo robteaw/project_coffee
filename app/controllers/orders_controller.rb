@@ -12,11 +12,15 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @order.reload
   end
 
   # GET /orders/new
   def new
     @order = Order.new
+    3.times do |n|
+      @order.order_items.build
+      end
   end
 
   # GET /orders/1/edit
@@ -71,6 +75,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :sub_total, :total_amount, :tax, :order_date, :id, :order_products_attributes => [:order_id, :product_id, :id])
+      params.require(:order).permit(:name, :sub_total, :total_amount, :tax, :order_date, :id, :order_items_attributes => [:order_id, :product_id, :id])
     end
 end

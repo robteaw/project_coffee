@@ -13,7 +13,7 @@ end
 
 
 # product
-Product.create([{name:'Coffee',image_url:'https://png.kisspng.com/20171216/dd9/5a35ea02ae33d1.6543248215134827547135.png',
+Product.create([{name:'Coffee',image_url:'https://10speedcoffee.com/wp-content/uploads/2015/12/cup1.png',
                  price:'2.50', remaining_quantity:'50'}])
 Product.create([{name:'Tea',image_url:'http://fairlytea.com/wp-content/uploads/2016/06/cup_PNG2000.png',
                  price:'3.25', remaining_quantity:'50'}])

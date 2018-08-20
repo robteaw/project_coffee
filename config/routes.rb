@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :order_items
   get 'employee_report', to: "employee_report#index"
   post 'employee_report', to: "employee_report#index"
 
@@ -29,7 +30,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sales
-  resources :order_products
   resources :products
   resources :employees
   resources :orders
