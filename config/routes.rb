@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'employee_report', to: "employee_report#index"
+  post 'employee_report', to: "employee_report#index"
+
   get 'sales_report', to: "sales_report#index"
   post 'sales_report', to: "sales_report#index"
+
+
 
   devise_for :users, :path_prefix => 'd', :skip => [:registrations]
   devise_scope :user do
