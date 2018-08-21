@@ -55,4 +55,4 @@ gem 'jquery-rails'
 
 gem 'devise'
 
-#test
+gem 'bootstrap', '~> 4.0.0'
