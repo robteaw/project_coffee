@@ -22,26 +22,28 @@
 
     <div class="one">
       <!--<img src="https://png.pngtree.com/element_origin_min_pic/16/09/23/1257e4b57685460.jpg" align="left" width="100px" height="100" border="2px">-->
-      <center><h1>Coffee Ordering System</h1></center>
+      <center><h2>Coffee Ordering System</h2></center>
 
     </div>
     <div class="two">
       <ul><center>
-        <li class="home"><b><%= link_to "Home", admin_path %></b></li>
+        <li class="home"><b><%= link_to image_tag("home.png", width: '20px') + " Home", admin_path%></b></li>
         <% if user_signed_in? %>
-          <li class="logout"><b><%= link_to 'Logout', destroy_user_session_path, method: :delete %></b></li>
+          <li class="logout"><b><%= link_to image_tag("login.png", width: '20px') + " Logout", destroy_user_session_path, method: :delete %></b></li>
+<!--          <li class="logout"><b><%#= link_to 'Logout', destroy_user_session_path, method: :delete %></b></li>-->
         <% else %>
-          <li class="login"><b><%= link_to 'Login', new_user_session_path %></b></li>
+          <li class="login"><b><%= link_to image_tag("login.png", width: '20px') + " Login", new_user_session_path%></b></li>
+<!--          <li class="login"><b><%#= link_to 'Login', new_user_session_path %></b></li>-->
         <% end %>
         <li><b><%= link_to "New Order", new_order_path%></b></li>
-        <li><b><%= link_to "Review Orders", orders_path%></b></li>
-        <li><b><%= link_to "Menu", products_path%></b></li>
+        <li><b><%= link_to image_tag("order.png", width: '20px') + " Review Orders", orders_path%></b></li>
+        <li><b><%= link_to image_tag("menu.png", width: '20px') + " Menu", products_path%></b></li>
 <!--        <li><b><%#= link_to "Order Items", order_items_path%></b></li>-->
 
           <% if current_user.try(&:manager) %>
-            <li><b><%= link_to "Employees", employees_path%></b></li>
-            <li><b><%= link_to "Sales", sales_path%></b></li>
-            <li><b><%= link_to 'Users', users_path %></b></li>
+          <li><b><%= link_to image_tag("employee.png", width: '20px') + " Employees", employees_path%></b></li>
+          <li><b><%= link_to image_tag("sale.png", width: '20px') + " Sales", sales_path%></b></li>
+          <li><b><%= link_to image_tag("user.png", width: '20px') + " Users", users_path%></b></li>
           <% end %>
 
         </nav>
@@ -73,7 +75,7 @@
           myIndex++;
           if (myIndex > x.length) {myIndex = 1}
           x[myIndex-1].style.display = "block";
-          setTimeout(carousel, 7000); // Change image every 7 seconds
+          setTimeout(carousel, 10000); // Change image every 10 seconds
       }
   </script>
 

@@ -20,9 +20,9 @@
   <%= number_to_currency(@order.tax) %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
-
+<br>
+<%= link_to '<button id="new"> Edit </button>' .html_safe, edit_order_path(@order) %> &nbsp;&nbsp;&nbsp;
+<%= link_to '<button id="new"> Back </button>' .html_safe, orders_path %>
 
 <style>
   a:visited {

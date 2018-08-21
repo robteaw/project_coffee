@@ -1,6 +1,6 @@
-<h1>Editing Product</h1>
+<h3>Editing Product</h3>
 
 <%= render 'form', product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= link_to '<button id="new"> Show </button>' .html_safe, @product %> &nbsp;&nbsp;&nbsp;
+<%= link_to '<button id="new"> Back </button>' .html_safe, products_path %>

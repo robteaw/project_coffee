@@ -5,9 +5,9 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-
+<br>
+<%= link_to '<button id="new"> Edit </button>' .html_safe, edit_user_path(@user) %> &nbsp;&nbsp;&nbsp;
+<%= link_to '<button id="new"> Back </button>' .html_safe, users_path %>
 
 
 <style>

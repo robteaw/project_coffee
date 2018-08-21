@@ -20,8 +20,9 @@
   <%= @product.remaining_quantity %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<br>
+<%= link_to '<button id="new"> Edit </button>' .html_safe, edit_product_path(@product) %> &nbsp;&nbsp;&nbsp;
+<%= link_to '<button id="new"> Back </button>' .html_safe, products_path %>
 
 
 <style>
