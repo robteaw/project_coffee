@@ -53,6 +53,10 @@
 
 .gallery_slideshow {
     opacity: 0.9;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    position: relative;
 }
 
 /*body {*/
