@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Menu Items</h1>
+<h1>Menu</h1>
 
-<table id="orders">
-  <thead>
+<table class="employee">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Image</th>
@@ -31,48 +31,7 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
-
+<%= link_to '<button id="new">New Product</button>'.html_safe, new_product_path %>
 
 
 <p id="notice"><%= notice %></p>
-
-
-
-
-<style>
-  #orders {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    color: black;
-  }
-
-  /*border*/
-  #orders td, #orders th {
-    border: 1px solid #ddd;
-    border-color: black;
-    padding: 8px;
-
-  }
-  /*table row*/
-  #orders tr:nth-child(even){background-color: #6A5750;}
-  #orders tr:nth-child(odd){background-color: #B5A397;}
-
-  /*hover*/
-  #orders tr:hover {background-color: #FFFAFA;}
-
-  /*table header*/
-  #orders th {
-    padding-top: 14px;
-    padding-bottom: 14px;
-    text-align: left;
-    background-color: #30231D;
-    color: white;
-  }
-
-     a:visited {
-     color: white;
-
-  }
-</style>

@@ -13,3 +13,116 @@
  *= require_tree .
  *= require_self
  */
+.one {
+    background-color: #712A17;
+    opacity: 0.6;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #6A5750;
+    color: white;
+    font-family: inherit;
+}
+.two {
+    background-color: #A45330;
+    border-color: #6A5750;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.login {
+    background-color: #856046;
+    border-color: #6A5750;
+    color: white;
+}
+
+.logged_in_nav {
+    background-color: #173e43;
+    border-style: solid;
+    border-width: 3px;
+    border-color:#6A5750;
+}
+
+.logout {
+    background-color: #dbc3d0;
+}
+
+
+.home {
+    background-color: #856046;
+}
+
+.gallery_slideshow {
+    opacity: 0.9;
+}
+
+/*body {*/
+/*background-color: #856046;*/
+/*font-family: inherit;*/
+/*color:black;*/
+/*}*/
+
+h1 {
+    color: white;
+    font-family: inherit;
+}
+
+/*---Link---*/
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #C7A693;
+
+}
+
+.two li a {
+    color:white;
+}
+
+.logged_in_nav li a {
+    color: white;
+}
+
+
+li {
+    display: inline-block;
+    float: left;
+    list-style-type: square;
+}
+
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+li a:hover {
+    font-weight: bold;
+    color: black;
+    background-color: #e0e0eb;
+    opacity: 0.2;
+}
+
+a:hover {
+    /*font-weight: bold;*/
+    background-color: #e0e0eb;
+    color:black;
+}
+
+
+a:link {
+    text-decoration:none;
+    color:black;
+}
+
+body {
+    background: url('wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
