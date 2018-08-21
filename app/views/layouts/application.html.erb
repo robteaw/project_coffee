@@ -35,7 +35,7 @@
           <li class="login"><b><%= link_to image_tag("login.png", width: '20px') + " Login", new_user_session_path%></b></li>
 <!--          <li class="login"><b><%#= link_to 'Login', new_user_session_path %></b></li>-->
         <% end %>
-        <li><b><%= link_to "New Order", new_order_path%></b></li>
+        <li><b><%= link_to image_tag("new.png", width: '20px') + " New Order", new_order_path%></b></li>
         <li><b><%= link_to image_tag("order.png", width: '20px') + " Review Orders", orders_path%></b></li>
         <li><b><%= link_to image_tag("menu.png", width: '20px') + " Menu", products_path%></b></li>
 <!--        <li><b><%#= link_to "Order Items", order_items_path%></b></li>-->
@@ -53,13 +53,13 @@
 
     </nav>
 
-
+<div class="container-fluid">
   <div class="gallery_slideshow">
     <img class="mySlides" src="http://s1.picswalls.com/wallpapers/2014/07/24/beautiful-coffee-wallpaper_112615430_81.jpg" height="300" width="100%">
     <!--<img class="mySlides" src="https://wallpaperscraft.com/image/saucer_cup_coffee_naptok_smoke_table_grain_84254_3840x2160.jpg" height="500" width="100%">-->
     <img class="mySlides" src="https://images6.alphacoders.com/402/402709.jpg" height="300" width="100%">
     <img class="mySlides" src="https://99px.ru/sstorage/53/2014/01/tmb_93961_1983.jpg" height="300" width="100%">
-
+  </div>
   </div>
 
   <script>

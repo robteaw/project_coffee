@@ -18,7 +18,7 @@
       <tr>
         <td><%= product.name %></td>
         <td class="image">
-          <%= image_tag(product.image_url, class: 'list_image', :height => 50) %></td>
+          <%= image_tag(product.image_url, class: 'list_image', :height => 30) %></td>
         <td><%= number_to_currency(product.price) %></td>
         <td><%= product.remaining_quantity %></td>
         <td><%= link_to 'Show', product %></td>

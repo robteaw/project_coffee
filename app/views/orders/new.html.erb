@@ -1,5 +1,9 @@
-<h3>New Order</h3>
+<br>
 
-<%= render 'form', order: @order %>
+<h3>New Order</h3>
+<div class="box">
+
+  <b><%= render 'form', order: @order %></b>
 
 <%= link_to '<button id="back">Back</button>'.html_safe, orders_path %>
+</div>
