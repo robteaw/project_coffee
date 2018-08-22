@@ -8,6 +8,10 @@
           <option name="host" value="https://gitlab.com/" />
           <option name="token" value="yKbo5pftUTS15CFuxMpe" />
         </ServerDto>
+        <ServerDto>
+          <option name="host" value="https://gitlab.com/robteaw/Project_Practice" />
+          <option name="token" value="yKbo5pftUTS15CFuxMpe" />
+        </ServerDto>
       </list>
     </option>
   </component>
