@@ -1,0 +1,53 @@
+<%= form_with(model: sale, local: true) do |form| %>
+  <% if sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+
+      <ul>
+      <% sale.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%= form.label :sale_date %>
+      <%= form.date_select :sale_date, id: :sale_date_of_sale %>
+    </div>
+
+
+    <div class="field">
+      <%= form.label :order_id %>
+      <%= form.text_field :order_id, id: :sale_order_id %>
+    </div>
+
+    <div class="field">
+      <%= form.label :employee_id %>
+      <%= form.text_field :employee_id, id: :sale_employee_id %>
+    </div>
+
+
+
+    <!--<div class="field">-->
+    <!--<%= form.label :order_id %>-->
+    <!--<%= form.collection_select :sale_order_id, Order.all, :id, :name %>-->
+  <!--</div>-->
+
+  <!--<div class="field">-->
+    <!--<%= form.label :employee_id %>-->
+    <!--<%= form.collection_select :sale_employee_id, Employee.all, :id, :name %>-->
+  <!--</div>-->
+<!--<br>-->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<style>
+  a:visited {
+    color: white;
+  }
+</style>

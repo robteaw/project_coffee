@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total_sales: 9.99
+  order: one
+  employee: one
+
+two:
+  total_sales: 9.99
+  order: two
+  employee: two
