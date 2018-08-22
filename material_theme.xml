@@ -1,9 +1,0 @@
-<application>
-  <component name="MaterialThemeConfig">
-    <option name="version" value="1.6.1" />
-    <option name="selectedTheme" value="PALENIGHT" />
-    <option name="isContrastMode" value="true" />
-    <option name="accentColor" value="64ffda" />
-    <option name="arrowsStyle" value="Darcula" />
-  </component>
-</application>
