@@ -1,0 +1,9 @@
+<br>
+<h3>Editing Product</h3>
+<div class="box">
+
+  <b><%= render 'form', product: @product %></b>
+
+<%= link_to '<button id="new"> Show </button>' .html_safe, @product %> &nbsp;&nbsp;&nbsp;
+<%= link_to '<button id="new"> Back </button>' .html_safe, products_path %>
+</div>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<h3>Employee</h3>
+
+<div class="box">
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Pay scale:</strong>
+  <%= number_to_currency (@employee.pay_scale) %>
+</p>
+
+<br>
+<%= link_to '<button id="new"> Edit </button>' .html_safe, edit_employee_path(@employee) %> &nbsp;&nbsp;&nbsp;
+<%= link_to '<button id="new"> Back </button>' .html_safe, employees_path %>
+
+</div>>
