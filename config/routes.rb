@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'order_report/index', to: "order_report#index"
+  post 'order_report', to: "order_report#index"
+
   resources :order_items
   get 'employee_report', to: "employee_report#index"
   post 'employee_report', to: "employee_report#index"
@@ -29,7 +32,6 @@ Rails.application.routes.draw do
   # end
 
   resources :users
-  resources :sales
   resources :products
   resources :employees
   resources :orders

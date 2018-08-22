@@ -39,7 +39,7 @@
 
           <% if current_user.try(&:manager) %>
           <li><b><%= link_to image_tag("employee.png", width: '20px') + " Employees", employees_path%></b></li>
-          <li><b><%= link_to image_tag("sale.png", width: '20px') + " Sales", sales_path%></b></li>
+          <li><b><%= link_to image_tag("sale.png", width: '20px') + " Sales", order_report_index_path%></b></li>
           <li><b><%= link_to image_tag("user.png", width: '20px') + " Users", users_path%></b></li>
           <% end %>
         <% if user_signed_in? %>

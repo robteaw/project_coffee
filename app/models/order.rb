@@ -1,5 +1,6 @@
 class Order < ApplicationRecord
 
+  belongs_to :employee
   has_many :order_items, dependent: :destroy
   has_many :products, :through => :order_items
 
