@@ -84,10 +84,10 @@
 /*}*/
 
 
-h1 {
+h1, h2, h3 {
     font: 200 50px/1.3 'Lobster Two', Helvetica, sans-serif;
     color: white;
-    text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+    text-shadow: 1px 1px 0 #ededed, 4px 4px 0 rgba(0,0,0,0.15);
 }
 
 h2 {
@@ -187,4 +187,16 @@ th {
 
 label{
     color: #ffff;
+}
+
+#new{
+    background-color: #856046;
+}
+
+.embed-responsive{
+    max-height: 20%;
+}
+
+#login{
+    float: right;
 }

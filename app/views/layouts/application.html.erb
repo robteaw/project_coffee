@@ -31,13 +31,7 @@
     <div class="two">
       <ul><center>
         <li class="home"><b><%= link_to image_tag("home.png", width: '20px') + " Home", admin_path%></b></li>
-        <% if user_signed_in? %>
-          <li class="logout"><b><%= link_to image_tag("login.png", width: '20px') + " Logout", destroy_user_session_path, method: :delete %></b></li>
-<!--          <li class="logout"><b><%#= link_to 'Logout', destroy_user_session_path, method: :delete %></b></li>-->
-        <% else %>
-          <li class="login"><b><%= link_to image_tag("login.png", width: '20px') + " Login", new_user_session_path%></b></li>
-<!--          <li class="login"><b><%#= link_to 'Login', new_user_session_path %></b></li>-->
-        <% end %>
+
         <li><b><%= link_to image_tag("new.png", width: '20px') + " New Order", new_order_path%></b></li>
         <li><b><%= link_to image_tag("order.png", width: '20px') + " Review Orders", orders_path%></b></li>
         <li><b><%= link_to image_tag("menu.png", width: '20px') + " Menu", products_path%></b></li>
@@ -48,40 +42,15 @@
           <li><b><%= link_to image_tag("sale.png", width: '20px') + " Sales", sales_path%></b></li>
           <li><b><%= link_to image_tag("user.png", width: '20px') + " Users", users_path%></b></li>
           <% end %>
-
-        </nav>
+        <% if user_signed_in? %>
+            <li class="logout"><b><%= link_to image_tag("login.png", width: '20px') + " Logout", destroy_user_session_path, method: :delete %></b></li>
+            <!--          <li class="logout"><b><%#= link_to 'Logout', destroy_user_session_path, method: :delete %></b></li>-->
+        <% else %>
+            <li class="login"><b><%= link_to image_tag("login.png", width: '20px') + " Login", new_user_session_path%></b></li>
+            <!--          <li class="login"><b><%#= link_to 'Login', new_user_session_path %></b></li>-->
+        <% end %>
       </center>
       </ul></div>
-
-
-<div class="topbodycontainer">
-  <div class="gallery_slideshow">
-    <img class="mySlides" src="http://s1.picswalls.com/wallpapers/2014/07/24/beautiful-coffee-wallpaper_112615430_81.jpg" height="300" width="100%">
-    <!--<img class="mySlides" src="https://wallpaperscraft.com/image/saucer_cup_coffee_naptok_smoke_table_grain_84254_3840x2160.jpg" height="500" width="100%">-->
-    <img class="mySlides" src="https://images6.alphacoders.com/402/402709.jpg" height="300" width="100%">
-    <img class="mySlides" src="https://99px.ru/sstorage/53/2014/01/tmb_93961_1983.jpg" height="300" width="100%">
-
-  </div>
-
-  <script>
-      var myIndex = 0;
-      carousel();
-
-      function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}
-          x[myIndex-1].style.display = "block";
-          setTimeout(carousel, 10000); // Change image every 10 seconds
-      }
-  </script>
-
-
-
 
 <body>
 <div class="rubybodycontainer">
