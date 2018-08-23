@@ -201,6 +201,11 @@ th {
 
 label{
     /*color: #ffff;*/
+    font-weight: bold;
+}
+
+field{
+    color: black;
 }
 
 #new{

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix => 'd', :skip => [:registrations]
   devise_scope :user do
     authenticated do
-      root to: 'products#index'
+      root to: 'admin#index'
     end
 
     unauthenticated do
