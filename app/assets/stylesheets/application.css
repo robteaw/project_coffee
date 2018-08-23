@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= stub 'admin'
  */
 .one {
     background-color: #382c29;
@@ -90,6 +91,10 @@ h1, h2, h3 {
     text-shadow: 1px 1px 0 #ededed, 4px 4px 0 rgba(0,0,0,0.15);
 }
 
+h5 {
+    color: white;
+}
+
 h2 {
     font-weight: bold;
 }
@@ -163,6 +168,7 @@ body {
     margin: 0;
 }
 
+
 p, ol, ul, td {
     font-size: 13px;
     line-height: 18px;
@@ -170,9 +176,17 @@ p, ol, ul, td {
 /* this color wont work because dark in the table means black */
 th {
     padding: 0 5px 7px;
-    background-color: #856046;
+    border: 5px solid #C7A693;
 }
 
+.thead1{
+    background-color: #382c29;
+    opacity: 0.8;
+    border-style: solid;
+    border-width: 3px;
+
+    color: white;
+}
 
 .topcontainerbody{
     padding: 0 22px 22px 5px;
@@ -180,7 +194,7 @@ th {
 }
 
 .rubybodycontainer{
-    padding: 5px 33px 22px 33px;
+    padding: 5px 80px 22px 80px;
     margin-left: 33px;
     margin-right: 33px;
 }
@@ -199,4 +213,25 @@ label{
 
 #login{
     float: right;
+}
+
+.jumbotron1{
+    background-image: url("https://i.imgur.com/eOww5fh.gif");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 400px;
+}
+.container1{
+    margin-left: 135px;
+}
+.containerlogin{
+    padding-top: 40px;
+}
+.buttoncup{
+    background-color: transparent;
+    background-image: url("https://i.imgur.com/Ux22Tv8.png");
+    height: 90px;
+    width: 100px;
+    color: white;
+    padding-left: 4px;
 }
