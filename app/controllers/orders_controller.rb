@@ -7,6 +7,17 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+
+    # if params[:order_date]
+    #   @orders = Order.where('order_date_id = ?', "#{params[:order_date]}"
+    #   ).paginate(:page => params[:page], per_page: 20).order('id DESC')
+    # elsif params[:start_date]
+    #   @orders = Order.where('date BETWEEN ? AND ?', "#{params[:start_date]}", "#{params[:end_date]}"
+    #   ).paginate(:page => params[:page], per_page: 20).order('id DESC')
+    # else
+    #   @orders = Order.paginate(page: params[:page], per_page: 20).order('id DESC')
+    # end
+
   end
 
   # GET /orders/1

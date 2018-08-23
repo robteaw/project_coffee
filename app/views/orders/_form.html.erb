@@ -11,10 +11,20 @@
         </div>
     <% end %>
 
+<!--  <div class="field">-->
+    <%#= form.label :employee_name %>
+    <%#= form.text_field :name, id: :employee_employee_id %>
+<!--  </div>-->
+
     <div class="field">
       <%= form.label :name %>
       <%= form.text_field :name, id: :order_name %>
     </div>
+
+  <div class="field">
+    <%= form.label :order_date %>
+    <%= form.date_select :order_date, id: :order_order_date %>
+  </div>
 
   <div class="field">
     <p>Choose the items for your order:</p>
